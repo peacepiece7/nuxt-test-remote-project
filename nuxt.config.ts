@@ -17,6 +17,18 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   /* --------------------------------------------------
+   * Runtime / Server
+   * @TODO: VERCEL 테스트용 나중에 node-server만 쓸 예정
+   * -------------------------------------------------- */
+  nitro: {
+    preset: process.env.VERCEL ? 'vercel' : 'node-server',
+    routeRules: {
+      '/': { redirect: '/home' },
+    },
+  },
+
+
+  /* --------------------------------------------------
    * Styles
    * -------------------------------------------------- */
   css: [
