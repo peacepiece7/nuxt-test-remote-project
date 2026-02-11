@@ -3,10 +3,10 @@
   import Container from '@/components/hanui/Container.vue'
   import Heading from '@/components/hanui/Heading.vue'
   import Card from '@/components/hanui/Card.vue'
-  import RequestStepper from '@/components/molecules/RequestSTepper.vue'
+  import RequestStepper from '@/components/molecules/RequestStepper.vue'
   import StatusStepper from '@/components/molecules/StatusStepper.vue'
   import ProgressIndicator from '@/components/molecules/ProgressIndicator.vue'
-  import type { RequestStep } from '~/components/molecules/RequestSTepper.vue'
+  import type { RequestStep } from '~/components/molecules/RequestStepper.vue'
   import type { StatusStep } from '~/components/molecules/StatusStepper.vue'
   import type { ProgressStep } from '~/components/molecules/ProgressIndicator.vue'
 
@@ -156,7 +156,8 @@
             </div>
 
             <p class="text-krds-gray-70 text-sm">
-              현재 단계: {{ requestCurrentStep + 1 }} / {{ requestSteps.length }}
+              현재 단계: {{ requestCurrentStep + 1 }} /
+              {{ requestSteps.length }}
             </p>
           </div>
         </Card>
@@ -232,9 +233,10 @@
               {{ requestStepsWithDisabled.length }}
             </p>
             <p class="text-krds-gray-60 text-xs">
-              첫 번째(1단계)와 마지막(6단계) 스텝은 클릭 불가능
-              (<code class="bg-krds-gray-5 rounded px-1">disabledIndices=[0,
-              5]</code>)
+              첫 번째(1단계)와 마지막(6단계) 스텝은 클릭 불가능 (<code
+                class="bg-krds-gray-5 rounded px-1"
+                >disabledIndices=[0, 5]</code
+              >)
             </p>
           </div>
         </Card>
@@ -282,7 +284,8 @@
               현재 단계: {{ statusCurrentStep + 1 }} / {{ statusSteps.length }}
             </p>
             <p class="text-krds-gray-60 text-xs">
-              기본값인 <code class="bg-krds-gray-5 rounded px-1">readonly=true</code
+              기본값인
+              <code class="bg-krds-gray-5 rounded px-1">readonly=true</code
               >에서는 스텝을 직접 클릭할 수 없습니다.
             </p>
           </div>
@@ -394,7 +397,10 @@
         <Heading level="h2" class="mb-6">ProgressIndicator</Heading>
         <Card variant="outlined" padding="lg" class="mb-6">
           <div class="space-y-6">
-            <ProgressIndicator :steps="progressSteps" :current="progressCurrent" />
+            <ProgressIndicator
+              :steps="progressSteps"
+              :current="progressCurrent"
+            />
 
             <div class="mt-4 flex gap-4">
               <button
@@ -449,10 +455,7 @@
                 class="bg-primary-600 hover:bg-primary-700 rounded-lg px-4 py-2 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-40"
                 :disabled="progressCurrentReject === 0"
                 @click="
-                  progressCurrentReject = Math.max(
-                    0,
-                    progressCurrentReject - 1,
-                  )
+                  progressCurrentReject = Math.max(0, progressCurrentReject - 1)
                 "
               >
                 이전
