@@ -1,0 +1,274 @@
+@import 'tailwindcss';
+@import './variables.css';
+
+/* PretendardGOV 폰트 정의 */
+@font-face {
+  font-family: 'PretendardGOV';
+  src:
+    url('../font/PretendardGOV-Regular.woff2') format('woff2'),
+    url('../font/PretendardGOV-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PretendardGOV';
+  src:
+    url('../font/PretendardGOV-Medium.woff2') format('woff2'),
+    url('../font/PretendardGOV-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PretendardGOV';
+  src:
+    url('../font/PretendardGOV-Bold.woff2') format('woff2'),
+    url('../font/PretendardGOV-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    font-size: 16px; /* 기준값 */
+  }
+  html,
+  body {
+    font-family:
+      'PretendardGOV',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      sans-serif;
+  }
+}
+
+@theme {
+  /* Base Colors */
+  --color-white: var(--color-white);
+  --color-black: var(--color-black);
+  --color-krds-white: var(--krds-white);
+  --color-krds-black: var(--krds-black);
+
+  /* KRDS Typography */
+  /* --text-krds-display-xl: var(--krds-display-xl);
+  --text-krds-display-lg: var(--krds-display-lg);
+  --text-krds-display-md: var(--krds-display-md);
+  --text-krds-display-sm: var(--krds-display-sm);
+
+  --text-krds-title-xl: var(--krds-title-xl);
+  --text-krds-title-lg: var(--krds-title-lg);
+  --text-krds-title-md: var(--krds-title-md);
+  --text-krds-title-sm: var(--krds-title-sm);
+  --text-krds-title-xs: var(--krds-title-xs);
+
+  --text-krds-body-lg: var(--krds-body-lg);
+  --text-krds-body-md: var(--krds-body-md);
+  --text-krds-body-sm: var(--krds-body-sm);
+  --text-krds-body-xs: var(--krds-body-xs);
+  --text-krds-body-xxs: var(--krds-body-xxs);
+  --text-krds-body-xxxs: var(--krds-body-xxxs); */
+
+  /* Gap Layout (MO) */
+  --gap-layout-header-container: 2.5em;
+  --gap-layout-container-footer: 3em;
+  --gap-layout-h1-component: 0;
+  --gap-layout-container: 2.5em;
+  --gap-layout-contents-large: 2em;
+  --gap-layout-contents-small: 2em;
+  --gap-layout-card-padding-large: 1.5em;
+  --gap-layout-card-padding-small: 1.25em;
+  --gap-layout-form-row: 1.5em;
+  --gap-layout-form-column: 1.5em;
+
+  /* KRDS Primary */
+  --color-krds-primary: var(--krds-primary-base);
+  --color-krds-primary-text: var(--krds-primary-text);
+  --color-krds-primary-surface: var(--krds-primary-surface);
+  --color-krds-primary-base: var(--krds-primary-base);
+  --color-krds-primary-border: var(--krds-primary-border);
+  --color-krds-primary-5: var(--krds-color-light-primary-5);
+  --color-krds-primary-7: var(--krds-color-light-primary-7);
+  --color-krds-primary-10: var(--krds-color-light-primary-10);
+  --color-krds-primary-20: var(--krds-color-light-primary-20);
+  --color-krds-primary-30: var(--krds-color-light-primary-30);
+  --color-krds-primary-40: var(--krds-color-light-primary-40);
+  --color-krds-primary-50: var(--krds-color-light-primary-50);
+  --color-krds-primary-60: var(--krds-color-light-primary-60);
+  --color-krds-primary-70: var(--krds-color-light-primary-70);
+  --color-krds-primary-80: var(--krds-color-light-primary-80);
+  --color-krds-primary-90: var(--krds-color-light-primary-90);
+  --color-krds-primary-95: var(--krds-color-light-primary-95);
+  --color-krds-primary-100: var(--krds-color-light-primary-100);
+
+  /* KRDS Secondary */
+  --color-krds-secondary: var(--krds-secondary-base);
+  --color-krds-secondary-text: var(--krds-secondary-text);
+  --color-krds-secondary-surface: var(--krds-secondary-surface);
+  --color-krds-secondary-base: var(--krds-secondary-base);
+  --color-krds-secondary-5: var(--krds-color-light-secondary-5);
+  --color-krds-secondary-10: var(--krds-color-light-secondary-10);
+  --color-krds-secondary-20: var(--krds-color-light-secondary-20);
+  --color-krds-secondary-30: var(--krds-color-light-secondary-30);
+  --color-krds-secondary-40: var(--krds-color-light-secondary-40);
+  --color-krds-secondary-50: var(--krds-color-light-secondary-50);
+  --color-krds-secondary-60: var(--krds-color-light-secondary-60);
+  --color-krds-secondary-70: var(--krds-color-light-secondary-70);
+  --color-krds-secondary-80: var(--krds-color-light-secondary-80);
+  --color-krds-secondary-90: var(--krds-color-light-secondary-90);
+  --color-krds-secondary-95: var(--krds-color-light-secondary-95);
+
+  --color-krds-tertiary-50: var(--krds-color-light-secondary-50);
+  --color-krds-tertiary-60: var(--krds-color-light-secondary-60);
+  --color-krds-tertiary-70: var(--krds-color-light-secondary-70);
+
+  /* KRDS Gray */
+  --color-krds-gray-text: var(--krds-gray-text);
+  --color-krds-gray-surface: var(--krds-gray-surface);
+  --color-krds-gray-background: var(--krds-gray-background);
+  --color-krds-gray-border: var(--krds-gray-border);
+  --color-krds-gray-0: var(--krds-color-light-gray-0);
+  --color-krds-gray-5: var(--krds-color-light-gray-5);
+  --color-krds-gray-7: var(--krds-color-light-gray-7);
+  --color-krds-gray-10: var(--krds-color-light-gray-10);
+  --color-krds-gray-20: var(--krds-color-light-gray-20);
+  --color-krds-gray-30: var(--krds-color-light-gray-30);
+  --color-krds-gray-40: var(--krds-color-light-gray-40);
+  --color-krds-gray-50: var(--krds-color-light-gray-50);
+  --color-krds-gray-60: var(--krds-color-light-gray-60);
+  --color-krds-gray-70: var(--krds-color-light-gray-70);
+  --color-krds-gray-80: var(--krds-color-light-gray-80);
+  --color-krds-gray-90: var(--krds-color-light-gray-90);
+  --color-krds-gray-95: var(--krds-color-light-gray-95);
+  --color-krds-gray-100: var(--krds-color-light-gray-100);
+
+  /* Neutral / Text (Figma) */
+  --color-neutral-title: var(--color-grey-900);
+  --color-neutral-body: var(--color-grey-800);
+  --color-neutral-caption: var(--color-grey-700);
+  --color-neutral-placeholder: var(--color-grey-600);
+  --color-neutral-disabled: var(--color-grey-500);
+
+  /* KRDS Danger */
+  --color-krds-danger: var(--krds-danger-base);
+  --color-krds-danger-icon: var(--krds-danger-icon);
+  --color-krds-danger-text: var(--krds-danger-text);
+  --color-krds-danger-surface: var(--krds-danger-surface);
+  --color-krds-danger-base: var(--krds-danger-base);
+  --color-krds-danger-border: var(--krds-danger-border);
+  --color-krds-danger-5: var(--krds-color-light-danger-5);
+  --color-krds-danger-10: var(--krds-color-light-danger-10);
+  --color-krds-danger-20: var(--krds-color-light-danger-20);
+  --color-krds-danger-30: var(--krds-color-light-danger-30);
+  --color-krds-danger-40: var(--krds-color-light-danger-40);
+  --color-krds-danger-50: var(--krds-color-light-danger-50);
+  --color-krds-danger-60: var(--krds-color-light-danger-60);
+  --color-krds-danger-70: var(--krds-color-light-danger-70);
+  --color-krds-danger-80: var(--krds-color-light-danger-80);
+  --color-krds-danger-90: var(--krds-color-light-danger-90);
+  --color-krds-danger-95: var(--krds-color-light-danger-95);
+
+  /* KRDS Warning */
+  --color-krds-warning: var(--krds-warning-base);
+  --color-krds-warning-icon: var(--krds-warning-icon);
+  --color-krds-warning-text: var(--krds-warning-text);
+  --color-krds-warning-surface: var(--krds-warning-surface);
+  --color-krds-warning-base: var(--krds-warning-base);
+  --color-krds-warning-border: var(--krds-warning-border);
+  --color-krds-warning-5: var(--krds-color-light-warning-5);
+  --color-krds-warning-10: var(--krds-color-light-warning-10);
+  --color-krds-warning-20: var(--krds-color-light-warning-20);
+  --color-krds-warning-30: var(--krds-color-light-warning-30);
+  --color-krds-warning-40: var(--krds-color-light-warning-40);
+  --color-krds-warning-50: var(--krds-color-light-warning-50);
+  --color-krds-warning-60: var(--krds-color-light-warning-60);
+  --color-krds-warning-70: var(--krds-color-light-warning-70);
+  --color-krds-warning-80: var(--krds-color-light-warning-80);
+  --color-krds-warning-90: var(--krds-color-light-warning-90);
+  --color-krds-warning-95: var(--krds-color-light-warning-95);
+
+  /* KRDS Success */
+  --color-krds-success: var(--krds-success-base);
+  --color-krds-success-icon: var(--krds-success-icon);
+  --color-krds-success-text: var(--krds-success-text);
+  --color-krds-success-surface: var(--krds-success-surface);
+  --color-krds-success-base: var(--krds-success-base);
+  --color-krds-success-border: var(--krds-success-border);
+  --color-krds-success-5: var(--krds-color-light-success-5);
+  --color-krds-success-10: var(--krds-color-light-success-10);
+  --color-krds-success-20: var(--krds-color-light-success-20);
+  --color-krds-success-30: var(--krds-color-light-success-30);
+  --color-krds-success-40: var(--krds-color-light-success-40);
+  --color-krds-success-50: var(--krds-color-light-success-50);
+  --color-krds-success-60: var(--krds-color-light-success-60);
+  --color-krds-success-70: var(--krds-color-light-success-70);
+  --color-krds-success-80: var(--krds-color-light-success-80);
+  --color-krds-success-90: var(--krds-color-light-success-90);
+  --color-krds-success-95: var(--krds-color-light-success-95);
+
+  /* KRDS Info */
+  --color-krds-info: var(--krds-information-base);
+  --color-krds-info-icon: var(--krds-information-icon);
+  --color-krds-info-text: var(--krds-information-text);
+  --color-krds-info-surface: var(--krds-information-surface);
+  --color-krds-info-base: var(--krds-information-base);
+  --color-krds-info-border: var(--krds-information-border);
+  --color-krds-info-5: var(--krds-color-light-information-5);
+  --color-krds-info-10: var(--krds-color-light-information-10);
+  --color-krds-info-20: var(--krds-color-light-information-20);
+  --color-krds-info-30: var(--krds-color-light-information-30);
+  --color-krds-info-40: var(--krds-color-light-information-40);
+  --color-krds-info-50: var(--krds-color-light-information-50);
+  --color-krds-info-60: var(--krds-color-light-information-60);
+  --color-krds-info-70: var(--krds-color-light-information-70);
+  --color-krds-info-80: var(--krds-color-light-information-80);
+  --color-krds-info-90: var(--krds-color-light-information-90);
+  --color-krds-info-95: var(--krds-color-light-information-95);
+
+  /* KRDS Accent */
+  --color-krds-accent: var(--krds-accent-base);
+  --color-krds-accent-text: var(--krds-accent-text);
+  --color-krds-accent-surface: var(--krds-accent-surface);
+  --color-krds-accent-base: var(--krds-accent-base);
+  --color-krds-accent-5: var(--krds-color-light-accent-5);
+  --color-krds-accent-10: var(--krds-color-light-accent-10);
+  --color-krds-accent-20: var(--krds-color-light-accent-20);
+  --color-krds-accent-30: var(--krds-color-light-accent-30);
+  --color-krds-accent-40: var(--krds-color-light-accent-40);
+  --color-krds-accent-50: var(--krds-color-light-accent-50);
+  --color-krds-accent-60: var(--krds-color-light-accent-60);
+  --color-krds-accent-70: var(--krds-color-light-accent-70);
+  --color-krds-accent-80: var(--krds-color-light-accent-80);
+  --color-krds-accent-90: var(--krds-color-light-accent-90);
+  --color-krds-accent-95: var(--krds-color-light-accent-95);
+
+  /* Font Family */
+  --font-sans:
+    'Pretendard GOV', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-gov:
+    'Pretendard GOV', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* Font Sizes - KRDS Typography (MO) */
+  --text-krds-body-xxxs: 0.8125rem; /* Body6 */
+  --text-krds-body-xxs: 0.875rem; /* Body5 */
+  --text-krds-body-xs: 0.9375rem; /* Body4 */
+  --text-krds-body-sm: 1rem; /* Body3 (Base) */
+  --text-krds-body-md: 1.0625rem; /* Body2 */
+  --text-krds-body-lg: 1.0625rem; /* Body1 */
+  --text-krds-title-xs: 1.125rem; /* H5 */
+  --text-krds-title-sm: 1.25rem; /* H4 */
+  --text-krds-title-md: 1.375rem; /* H3 */
+  --text-krds-title-lg: 1.5rem; /* H2 */
+  --text-krds-title-xl: 1.625rem; /* H1 */
+  --text-krds-display-sm: 1.625rem; /* Display4 */
+  --text-krds-display-md: 2rem; /* Display3 */
+  --text-krds-display-lg: 2.25rem; /* Display2 */
+  --text-krds-display-xl: 2.625rem; /* Display1 */
+}

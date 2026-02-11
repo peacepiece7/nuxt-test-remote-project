@@ -1,0 +1,189 @@
+/**
+ * HANUI Design System - CSS Variables
+ * Korean Government Design System (KRDS) 기반 CSS 변수
+ */
+
+
+/* html {
+  font-size: 100%;
+} */
+
+:root {
+  --font-pretendard:
+    'Pretendard GOV', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* Typography Base Font Size (KRDS 기준) */
+
+
+
+  /* Container Variables */
+
+
+  /* Base Colors */
+
+  /* --color-white: #ffffff;
+  --color-black: #000000; */
+  /* Common */
+  --color-common-200: #000000;
+  --color-common-100: #ffffff;
+
+  /* New Blue */
+  --color-new-blue-1000: #0e2977;
+  --color-new-blue-950: #162C73;
+  --color-new-blue-900: #0630ae;
+  --color-new-blue-800: #0a38c2;
+  --color-new-blue-700: #1a48d5;
+  --color-new-blue-600: #3661e5;
+  --color-new-blue-500: #5b81f3;
+  --color-new-blue-400: #81a0ff;
+  --color-new-blue-300: #a4bbff;
+  --color-new-blue-250: #c6d1f4;
+  --color-new-blue-200: #d0dbff;
+  --color-new-blue-100: #e6ecff;
+  --color-new-blue-50: #f7f9ff;
+
+  /* Blue */
+  --color-blue-900: #162C73;
+  --color-blue-900: #003064;
+  --color-blue-800: #00407f;
+  --color-blue-700: #0156a8;
+  --color-blue-600: #0171d5;
+  --color-blue-500: #2485ff;
+  --color-blue-400: #66aaff;
+  --color-blue-300: #a2cbff;
+  --color-blue-200: #d2e2ff;
+  --color-blue-100: #eaf0ff;
+  --color-blue-50: #f5f8ff;
+
+  /* Sky Blue */
+  --color-sky-blue-900: #004568;
+  --color-sky-blue-800: #005c8a;
+  --color-sky-blue-700: #0075af;
+  --color-sky-blue-600: #0291d8;
+  --color-sky-blue-500: #21b5ff;
+  --color-sky-blue-400: #54c6ff;
+  --color-sky-blue-300: #9fdfff;
+  --color-sky-blue-200: #d0f0ff;
+  --color-sky-blue-100: #e2f6ff;
+  --color-sky-blue-50: #f0faff;
+
+  /* Cyan */
+  --color-cyan-900: #01636f;
+  --color-cyan-800: #007482;
+  --color-cyan-700: #028798;
+  --color-cyan-600: #0298ab;
+  --color-cyan-500: #04b8cf;
+  --color-cyan-400: #2ed3e9;
+  --color-cyan-300: #92e7f3;
+  --color-cyan-200: #d1f1f6;
+  --color-cyan-100: #e1fafe;
+  --color-cyan-50: #f0fdff;
+
+  /* Green */
+  --color-green-900: #003915;
+  --color-green-800: #005322;
+  --color-green-700: #006d2f;
+  --color-green-600: #008a3e;
+  --color-green-500: #25a555;
+  --color-green-400: #48c16d;
+  --color-green-300: #9af0b0;
+  --color-green-200: #d2fadb;
+  --color-green-100: #e5ffe9;
+  --color-green-50: #f1fff4;
+
+  /* Purple Blue */
+  --color-purple-blue-900: #240967;
+  --color-purple-blue-800: #310d8b;
+  --color-purple-blue-700: #461dad;
+  --color-purple-blue-600: #5729cb;
+  --color-purple-blue-500: #7e50f4;
+  --color-purple-blue-400: #927cf1;
+  --color-purple-blue-300: #b0a3f4;
+  --color-purple-blue-200: #ded3ff;
+  --color-purple-blue-100: #efe9ff;
+  --color-purple-blue-50: #f8f5ff;
+
+  /* Purple */
+  --color-purple-900: #3f0978;
+  --color-purple-800: #511295;
+  --color-purple-700: #6315b6;
+  --color-purple-600: #7729cb;
+  --color-purple-500: #9b59e0;
+  --color-purple-400: #b882f2;
+  --color-purple-300: #d3abfd;
+  --color-purple-200: #e7d1ff;
+  --color-purple-100: #f5ecff;
+  --color-purple-50: #fbf7ff;
+
+  /* Red */
+  --color-red-900: #760210;
+  --color-red-800: #980517;
+  --color-red-700: #bf0018;
+  --color-red-600: #de1f37;
+  --color-red-500: #ec354c;
+  --color-red-400: #f25569;
+  --color-red-300: #f77b8a;
+  --color-red-200: #ffafb9;
+  --color-red-100: #ffdde1;
+  --color-red-50: #fff6f7;
+
+  /* Orange */
+  --color-orange-900: #6f2e02;
+  --color-orange-800: #8c3800;
+  --color-orange-700: #bd4d02;
+  --color-orange-600: #ee6f00;
+  --color-orange-500: #f88010;
+  --color-orange-400: #fb9c43;
+  --color-orange-300: #ffb570;
+  --color-orange-200: #ffcd9f;
+  --color-orange-100: #ffe3c9;
+  --color-orange-50: #fff2e5;
+
+  /* Yellow */
+  --color-yellow-900: #744f00;
+  --color-yellow-800: #926401;
+  --color-yellow-700: #c08300;
+  --color-yellow-600: #dda600;
+  --color-yellow-500: #f3bb01;
+  --color-yellow-400: #ffcc13;
+  --color-yellow-300: #ffd735;
+  --color-yellow-200: #ffe57c;
+  --color-yellow-100: #fff0b2;
+  --color-yellow-50: #fff8dc;
+
+  /* Grey */
+  --color-grey-900: #181e25;
+  --color-grey-800: #28303a;
+  --color-grey-700: #505b69;
+  --color-grey-650: #5A626D;
+  --color-grey-600: #6a7583;
+  --color-grey-500: #858f9d;
+  --color-grey-400: #a2a9b3;
+  --color-grey-300: #d0d4d9;
+  --color-grey-200: #e1e7ee;
+  --color-grey-100: #f3f5f8;
+  --color-grey-50: #f9fafb;
+
+}
+
+/* Dark Mode */
+
+
+
+@media (min-width: 1024px) {
+  :root {
+    /* Spacing - PC */
+    /* --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-48: 48px;
+    --space-56: 56px;
+    --space-64: 64px;
+    --space-80: 80px; */
+  }
+}

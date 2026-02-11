@@ -1,0 +1,217 @@
+@import "tailwindcss";
+@import "./figma-token.css";
+
+@theme {
+  /* Base Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Primary (New Blue 매핑) */
+  --color-primary-50: var(--color-new-blue-50);
+  --color-primary-100: var(--color-new-blue-100);
+  --color-primary-200: var(--color-new-blue-200);
+  --color-primary-300: var(--color-new-blue-300);
+  --color-primary-400: var(--color-new-blue-400);
+  --color-primary-500: var(--color-new-blue-500);
+  --color-primary-600: var(--color-new-blue-600);
+  --color-primary-700: var(--color-new-blue-700);
+  --color-primary-800: var(--color-new-blue-800);
+  --color-primary-900: var(--color-new-blue-900);
+
+  /* ============================
+   * New Blue
+   * ============================ */
+  --color-new-blue-1000: var(--color-new-blue-1000);
+  --color-new-blue-950: var(--color-new-blue-950);
+  --color-new-blue-900: var(--color-new-blue-900);
+  --color-new-blue-800: var(--color-new-blue-800);
+  --color-new-blue-700: var(--color-new-blue-700);
+  --color-new-blue-600: var(--color-new-blue-600);
+  --color-new-blue-500: var(--color-new-blue-500);
+  --color-new-blue-400: var(--color-new-blue-400);
+  --color-new-blue-300: var(--color-new-blue-300);
+  --color-new-blue-250: var(--color-new-blue-250);
+  --color-new-blue-200: var(--color-new-blue-200);
+  --color-new-blue-100: var(--color-new-blue-100);
+  --color-new-blue-50: var(--color-new-blue-50);
+
+  /* ============================
+   * Blue
+   * ============================ */
+  --color-blue-900: var(--color-blue-900);
+  --color-blue-800: var(--color-blue-800);
+  --color-blue-700: var(--color-blue-700);
+  --color-blue-600: var(--color-blue-600);
+  --color-blue-500: var(--color-blue-500);
+  --color-blue-400: var(--color-blue-400);
+  --color-blue-300: var(--color-blue-300);
+  --color-blue-200: var(--color-blue-200);
+  --color-blue-100: var(--color-blue-100);
+  --color-blue-50: var(--color-blue-50);
+
+  /* ============================
+   * Sky Blue
+   * ============================ */
+  --color-sky-blue-900: var(--color-sky-blue-900);
+  --color-sky-blue-800: var(--color-sky-blue-800);
+  --color-sky-blue-700: var(--color-sky-blue-700);
+  --color-sky-blue-600: var(--color-sky-blue-600);
+  --color-sky-blue-500: var(--color-sky-blue-500);
+  --color-sky-blue-400: var(--color-sky-blue-400);
+  --color-sky-blue-300: var(--color-sky-blue-300);
+  --color-sky-blue-200: var(--color-sky-blue-200);
+  --color-sky-blue-100: var(--color-sky-blue-100);
+  --color-sky-blue-50: var(--color-sky-blue-50);
+
+  /* ============================
+   * Cyan
+   * ============================ */
+  --color-cyan-900: var(--color-cyan-900);
+  --color-cyan-800: var(--color-cyan-800);
+  --color-cyan-700: var(--color-cyan-700);
+  --color-cyan-600: var(--color-cyan-600);
+  --color-cyan-500: var(--color-cyan-500);
+  --color-cyan-400: var(--color-cyan-400);
+  --color-cyan-300: var(--color-cyan-300);
+  --color-cyan-200: var(--color-cyan-200);
+  --color-cyan-100: var(--color-cyan-100);
+  --color-cyan-50: var(--color-cyan-50);
+
+  /* ============================
+   * Green
+   * ============================ */
+  --color-green-900: var(--color-green-900);
+  --color-green-800: var(--color-green-800);
+  --color-green-700: var(--color-green-700);
+  --color-green-600: var(--color-green-600);
+  --color-green-500: var(--color-green-500);
+  --color-green-400: var(--color-green-400);
+  --color-green-300: var(--color-green-300);
+  --color-green-200: var(--color-green-200);
+  --color-green-100: var(--color-green-100);
+  --color-green-50: var(--color-green-50);
+
+  /* ============================
+   * Purple Blue
+   * ============================ */
+  --color-purple-blue-900: var(--color-purple-blue-900);
+  --color-purple-blue-800: var(--color-purple-blue-800);
+  --color-purple-blue-700: var(--color-purple-blue-700);
+  --color-purple-blue-600: var(--color-purple-blue-600);
+  --color-purple-blue-500: var(--color-purple-blue-500);
+  --color-purple-blue-400: var(--color-purple-blue-400);
+  --color-purple-blue-300: var(--color-purple-blue-300);
+  --color-purple-blue-200: var(--color-purple-blue-200);
+  --color-purple-blue-100: var(--color-purple-blue-100);
+  --color-purple-blue-50: var(--color-purple-blue-50);
+
+  /* ============================
+   * Purple
+   * ============================ */
+  --color-purple-900: var(--color-purple-900);
+  --color-purple-800: var(--color-purple-800);
+  --color-purple-700: var(--color-purple-700);
+  --color-purple-600: var(--color-purple-600);
+  --color-purple-500: var(--color-purple-500);
+  --color-purple-400: var(--color-purple-400);
+  --color-purple-300: var(--color-purple-300);
+  --color-purple-200: var(--color-purple-200);
+  --color-purple-100: var(--color-purple-100);
+  --color-purple-50: var(--color-purple-50);
+
+  /* ============================
+   * Red
+   * ============================ */
+  --color-red-900: var(--color-red-900);
+  --color-red-800: var(--color-red-800);
+  --color-red-700: var(--color-red-700);
+  --color-red-600: var(--color-red-600);
+  --color-red-500: var(--color-red-500);
+  --color-red-400: var(--color-red-400);
+  --color-red-300: var(--color-red-300);
+  --color-red-200: var(--color-red-200);
+  --color-red-100: var(--color-red-100);
+  --color-red-50: var(--color-red-50);
+
+  /* ============================
+   * Orange
+   * ============================ */
+  --color-orange-900: var(--color-orange-900);
+  --color-orange-800: var(--color-orange-800);
+  --color-orange-700: var(--color-orange-700);
+  --color-orange-600: var(--color-orange-600);
+  --color-orange-500: var(--color-orange-500);
+  --color-orange-400: var(--color-orange-400);
+  --color-orange-300: var(--color-orange-300);
+  --color-orange-200: var(--color-orange-200);
+  --color-orange-100: var(--color-orange-100);
+  --color-orange-50: var(--color-orange-50);
+
+  /* ============================
+   * Yellow
+   * ============================ */
+  --color-yellow-900: var(--color-yellow-900);
+  --color-yellow-800: var(--color-yellow-800);
+  --color-yellow-700: var(--color-yellow-700);
+  --color-yellow-600: var(--color-yellow-600);
+  --color-yellow-500: var(--color-yellow-500);
+  --color-yellow-400: var(--color-yellow-400);
+  --color-yellow-300: var(--color-yellow-300);
+  --color-yellow-200: var(--color-yellow-200);
+  --color-yellow-100: var(--color-yellow-100);
+  --color-yellow-50: var(--color-yellow-50);
+
+  /* ============================
+   * Grey
+   * ============================ */
+  --color-grey-900: var(--color-grey-900);
+  --color-grey-800: var(--color-grey-800);
+  --color-grey-700: var(--color-grey-700);
+  --color-grey-650: var(--color-grey-650);
+  --color-grey-600: var(--color-grey-600);
+  --color-grey-500: var(--color-grey-500);
+  --color-grey-400: var(--color-grey-400);
+  --color-grey-300: var(--color-grey-300);
+  --color-grey-200: var(--color-grey-200);
+  --color-grey-100: var(--color-grey-100);
+  --color-grey-50: var(--color-grey-50);
+
+  /* ============================
+   * Functional
+   * ============================ */
+  --color-functional-positive: var(--color-blue-600);
+  --color-functional-negative: var(--color-red-600);
+  --color-functional-success: var(--color-green-600);
+
+  /* ============================
+   * Text
+   * ============================ */
+  --color-text-title: var(--color-grey-900);
+  --color-text-body: var(--color-grey-800);
+  --color-text-caption: var(--color-grey-700);
+  --color-text-placeholder: var(--color-grey-600);
+  --color-text-disabled: var(--color-grey-500);
+
+  /* ============================
+   * Fill
+   * ============================ */
+  --color-fill-200: var(--color-grey-200);
+  --color-fill-100: var(--color-grey-100);
+  --color-fill-50: var(--color-grey-50);
+
+  /* ============================
+   * Stroke
+   * ============================ */
+  --color-stroke-300: var(--color-grey-300);
+  --color-stroke-400: var(--color-grey-400);
+  --color-stroke-200: var(--color-grey-200);
+  --color-stroke-900: var(--color-grey-900);
+
+  /* ============================
+   * Opacity
+   * ============================ */
+  --color-opacity-tooltip: var(--color-grey-800);
+  --color-opacity-dimmed: rgba(24, 30, 37, 0.6);
+  --color-opacity-hover-pressed: rgba(24, 30, 37, 0.4);
+  --color-opacity-hover-pressed-5: rgba(24, 30, 37, 0.05);
+}
